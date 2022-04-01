@@ -8,7 +8,7 @@ const getGitHubUser = async (companyName) => {
     }
     const data = await response.json();
     console.log("data", data);
-    // console.log(date.find((el) => el.company.name === companyName));
+    console.log(data.find((el) => el.company.name === companyName));
   } catch (responseError) {
     if (responseError.status === 404) {
       console.log("User is not found");
